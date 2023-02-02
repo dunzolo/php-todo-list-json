@@ -40,6 +40,9 @@
                             <button class="input-group-text btn btn-warning" @click="addTask">Inserisci</button>
                         </div>
                     </div>
+                    <div class="col-12" v-if="error_message != ''">
+                        <p class="text-danger text-center"><strong>{{ error_message }}</strong></p>
+                    </div>
                 </div>
             </div>
         </div>

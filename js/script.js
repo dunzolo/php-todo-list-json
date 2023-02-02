@@ -6,6 +6,7 @@ createApp({
             api_url: 'server.php',
             array_list: [],
             task: '',
+            error_message: ''
         }
     },
     methods: {
@@ -16,12 +17,18 @@ createApp({
                 done: false,
             }
 
-            axios.post(this.api_url, data, {
-                headers: { 'Content-Type': 'multipart/form-data' }
-            }).then((response) => {
-                this.task = '';
-                this.array_list = response.data;
-            })
+            if (this.task.trim() != '' && this.task != '') {
+                axios.post(this.api_url, data, {
+                    headers: { 'Content-Type': 'multipart/form-data' }
+                }).then((response) => {
+                    this.task = '';
+                    this.array_list = response.data;
+                    this.error_message = '';
+                })
+            }
+            else {
+                this.error_message = 'Non puoi inserire una stringa vuota';
+            }
         },
     },
     created() {
