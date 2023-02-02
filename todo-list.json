@@ -12,11 +12,7 @@
         "done": false
     },
     {
-        "task": "PHP",
-        "done": false
-    },
-    {
-        "task": "Vuejs",
+        "task": "VueJs",
         "done": false
     }
 ]

@@ -24,6 +24,14 @@
         file_put_contents('todo-list.json', json_encode($array_list, JSON_PRETTY_PRINT));
     }
 
+    // 2.2 - elimino un elemento dall'array associativo
+    if(isset($_POST['delete'])){
+        //tolgo dall'array l'elemento corrispondente all'indice ricavato tramite il post
+        unset($array_list[$_POST['delete']]);
+
+        file_put_contents('todo-list.json', json_encode($array_list, JSON_PRETTY_PRINT));
+    }
+
     //3 - codifico in formato json l'array
     header('Content-Type: application/json');
     echo json_encode($array_list);

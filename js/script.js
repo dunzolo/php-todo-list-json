@@ -30,6 +30,18 @@ createApp({
                 this.error_message = 'Non puoi inserire una stringa vuota';
             }
         },
+        //elimino un elemento
+        deleteTask(index) {
+            const data = {
+                delete: index
+            }
+
+            axios.post(this.api_url, data, {
+                headers: { 'Content-Type': 'multipart/form-data' }
+            }).then((response) => {
+                this.array_list = response.data;
+            })
+        }
     },
     created() {
         axios.get(this.api_url).then((response) => {

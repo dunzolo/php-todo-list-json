@@ -28,7 +28,21 @@
                     <div class="col-6">
                         <div class="card">
                             <ul class="list-group list-group-flush">
-                                <li class="list-group-item" v-for="(item, index) in array_list">{{ item.task }}</li> 
+                                <li class="list-group-item" v-for="(item, index) in array_list">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            {{ item.task }}
+                                        </div>
+                                        <div>
+                                            <button class="m-1 btn btn-square btn-secondary" @click="editTask(index)">
+                                                <i class="fa fa-edit"></i>
+                                            </button>
+                                            <button class="m-1 btn btn-square btn-danger" @click="deleteTask(index)">
+                                                <i class="fa fa-trash"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </li> 
                             </ul>
                         </div>
                     </div>
@@ -37,7 +51,7 @@
                     <div class="col-6">
                         <div class="input-group flex-nowrap">
                             <input type="text" class="form-control" placeholder="Inserisci elemento..." v-model="task">
-                            <button class="input-group-text btn btn-warning" @click="addTask">Inserisci</button>
+                            <button class="input-group-text btn btn-warning w-25" @click="addTask">Inserisci</button>
                         </div>
                     </div>
                     <div class="col-12" v-if="error_message != ''">
