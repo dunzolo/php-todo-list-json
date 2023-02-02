@@ -1,22 +1,22 @@
-{
-    "0": {
+[
+    {
         "task": "HTML",
         "done": false
     },
-    "1": {
+    {
         "task": "CSS",
         "done": false
     },
-    "2": {
+    {
         "task": "Javascript",
         "done": false
     },
-    "3": {
+    {
         "task": "PHP",
         "done": false
     },
-    "4": {
+    {
         "task": "Vuejs",
         "done": false
     }
-}
+]
