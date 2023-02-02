@@ -1,22 +1,22 @@
 {
     "0": {
-        "language": "HTML",
+        "task": "HTML",
         "done": false
     },
     "1": {
-        "language": "CSS",
+        "task": "CSS",
         "done": false
     },
     "2": {
-        "language": "Javascript",
+        "task": "Javascript",
         "done": false
     },
     "3": {
-        "language": "PHP",
+        "task": "PHP",
         "done": false
     },
     "4": {
-        "language": "Vuejs",
+        "task": "Vuejs",
         "done": false
     }
 }

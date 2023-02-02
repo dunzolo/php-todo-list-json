@@ -24,11 +24,21 @@
                         <h1 class="text-center text-white">Todo List</h1>
                     </div>
                 </div>
-                <div class="row d-flex justify-content-center">
-                    <div class="card w-50">
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item" v-for="(item, index) in array_list">{{ item.language }}</li> 
-                        </ul>
+                <div class="row d-flex justify-content-center mt-3">
+                    <div class="col-6">
+                        <div class="card">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item" v-for="(item, index) in array_list">{{ item.task }}</li> 
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-center mt-3">
+                    <div class="col-6">
+                        <div class="input-group flex-nowrap">
+                            <input type="text" class="form-control" placeholder="Inserisci elemento..." v-model="task">
+                            <button class="input-group-text btn btn-warning" @click="addTask">Inserisci</button>
+                        </div>
                     </div>
                 </div>
             </div>

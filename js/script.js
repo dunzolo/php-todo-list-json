@@ -5,6 +5,7 @@ createApp({
         return {
             api_url: 'server.php',
             array_list: [],
+            task: '',
         }
     },
     created() {
